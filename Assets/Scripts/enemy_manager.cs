@@ -13,25 +13,31 @@ public class enemy_manager : MonoBehaviour
     {
         timer = 0;
         maxTimer = Random.Range(5f, 12f);
+
+        StartCoroutine("SpawnEnemyTimer");
     }
 
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine("SpawnEnemyTimer");
+        
     }
 
     IEnumerator SpawnEnemyTimer()
     {
-        if (timer >= maxTimer)
+        while (true)
         {
-            SpawnEnemy();
-            timer = 0;
-            maxTimer = Random.Range(5f, 12f);
-        }
+            if (timer >= maxTimer)
+            {
+                SpawnEnemy();
+                timer = 0;
+                maxTimer = Random.Range(5f, 12f);
+            }
 
-        timer += 0.1f;
-        yield return new WaitForSeconds(0.1f);
+            timer += 0.1f;
+            yield return new WaitForSeconds(0.1f);
+        }
+        
     }
 
     private void SpawnEnemy()
