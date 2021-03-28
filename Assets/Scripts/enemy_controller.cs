@@ -47,23 +47,22 @@ public class enemy_controller : MonoBehaviour
 
     IEnumerator FireBullet()
     {
-        
-            if (timerBullet >= maxTimerBullet)
-            {
-                SpawnBullet();
-                timerBullet = 0;
-                maxTimerBullet = Random.Range(5f, 25f);
-            }
+        if (timerBullet >= maxTimerBullet)
+        {
+            SpawnBullet();
+            timerBullet = 0;
+            maxTimerBullet = Random.Range(5f, 25f);
+        }
 
-            timerBullet += 0.1f;
-            yield return new WaitForSeconds(0.1f);
+        timerBullet += 0.1f;
+        yield return new WaitForSeconds(0.1f);
         
     }
 
     private void SpawnBullet()
     {
         Vector3 spawnPoint = transform.position;
-        spawnPoint.y = (bullet.GetComponent<Renderer>().bounds.size.y / 2) + (GetComponent<Renderer>().bounds.size.y  / 2);
+        spawnPoint.y = spawnPoint.y - ((bullet.GetComponent<Renderer>().bounds.size.y / 2) + (GetComponent<Renderer>().bounds.size.y / 2));
         GameObject.Instantiate(bullet, spawnPoint, transform.rotation);
     }
 }

@@ -303,8 +303,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 222498698807640157, guid: 928c8df2220631e44868a3f3d4a373c6, type: 3}
-  timerMin: 1
-  timerMax: 2
+  timerMin: 5
+  timerMax: 12
 --- !u!4 &722767845
 Transform:
   m_ObjectHideFlags: 0
