@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 222498698807640129}
   - component: {fileID: 222498698807640130}
   - component: {fileID: 9136741044374602520}
+  - component: {fileID: 8429602769249526124}
   m_Layer: 9
   m_Name: enemy
   m_TagString: Enemy
@@ -120,6 +121,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -0.25
   bullet: {fileID: 3906739107913024608, guid: a8b67979c2da6944594fdeb31e7ea891, type: 3}
+  timerMin: 5
+  timerMax: 25
+  canFireBullets: 1
 --- !u!61 &9136741044374602520
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -146,3 +150,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.22892234, y: 0.19531721}
   m_EdgeRadius: 0
+--- !u!95 &8429602769249526124
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222498698807640157}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c9d2ada22ebc3dd46b268b8ab9688a31, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
