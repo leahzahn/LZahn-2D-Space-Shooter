@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 222498698807640129}
   - component: {fileID: 222498698807640130}
   - component: {fileID: 9136741044374602520}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -0.25
+  bullet: {fileID: 3906739107913024608, guid: a8b67979c2da6944594fdeb31e7ea891, type: 3}
 --- !u!61 &9136741044374602520
 BoxCollider2D:
   m_ObjectHideFlags: 0
